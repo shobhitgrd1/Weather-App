@@ -1,8 +1,10 @@
+
 const cityName = document.getElementById('cityName')
 const submitBtn = document.getElementById('submitBtn');
 const city_name = document.getElementById('city_name')
 const temp_status = document.getElementById('temp_status')
 const temp = document.getElementById('temp_real_val')
+
 
 
 const getInfo = async (event) => {
@@ -22,8 +24,6 @@ const getInfo = async (event) => {
 
             const tempMood = arrData[0].weather[0].main;
 
-            console.log(tempMood);
-
             //condition to check clouds
             if(tempMood == "Clear"){
             temp_status.innerHTML = '<i class="fas fa-sun" style="color: #eccc68 "></i>';
@@ -33,7 +33,7 @@ const getInfo = async (event) => {
             temp_status.innerHTML ='<i class="fas fa-cloud-rain" style="color: #a4b0be"></i>';
             }else{
             temp_status.innerHTML ='<i class="fas fa-sun" style="color: #eccc68"></i>';
-            }
+            }``
           
         } catch {
             city_name.innerHTML = "Please enter VALID city name"
